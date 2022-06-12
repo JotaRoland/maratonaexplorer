@@ -6,3 +6,8 @@
 :root {
   font-size: 62.5%;
 }
+
+.blur {
+  transition: 0.25s;
+  filter: blur(0.2rem);
+}
