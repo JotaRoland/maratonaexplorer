@@ -1,4 +1,6 @@
+const inputQuestion = document.querySelector('#inputQuestion');
 const answerElement = document.querySelector('#answer');
+const modal = document.getElementById('modal');
 
 const answer = [
   'For sure!',
@@ -19,7 +21,17 @@ const answer = [
 ];
 
 function response() {
-  const totalAnswer = answer.length;
-  const randomNumber = Math.floor(Math.random() * totalAnswer);
-  console.log(randomNumber);
+  if (inputQuestion.value != '') {
+    const totalAnswer = answer.length;
+    const randomNumber = Math.floor(Math.random() * totalAnswer);
+
+    document.getElementById('question').innerHTML = inputQuestion.value;
+    answerElement.innerHTML = answer[randomNumber];
+
+    modal.classList.add('open');
+  }
+}
+
+function closeModal() {
+  modal.classList.remove('open');
 }

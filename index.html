@@ -25,7 +25,7 @@
       />
       <h1>I'll show you your destiny!</h1>
       <p>Click Ask so your destiny will be revealed.</p>
-      <input type="text" placeholder="Type your question" />
+      <input id="inputQuestion" type="text" placeholder="Type your question" />
       <button id="askButton" onclick="response()">Ask</button>
 
       <!-- <div class="modalContainer">
@@ -37,7 +37,7 @@
           <div class="modalContainer">
             <h3 id="question">Question</h3>
             <h2 id="answer">Perhaps</h2>
-            <button class="modalClose modalExit">
+            <button class="modalClose modalExit" onclick="closeModal()">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                 <!-- ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                 <path
